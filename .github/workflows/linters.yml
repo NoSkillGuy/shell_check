@@ -1,0 +1,16 @@
+name: linters
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  lint-sh:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: shellcheck -V
+      - name: Lint Shell scripts
+        run: tools/lint-sh.js . 
