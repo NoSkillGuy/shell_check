@@ -1,5 +1,9 @@
 name: linters
 
+
+env:
+  NODE_VERSION: 14.x
+
 on:
   push:
     branches:
